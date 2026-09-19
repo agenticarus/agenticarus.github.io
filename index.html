@@ -48,6 +48,7 @@
     <li><strong><a href="notes.html#typechange">git status reports <code>T</code> for typechange</a></strong> — why status parsers crash with <code>ValueError: 'T' is not a valid Status</code>, how to reproduce it in two commands, and the fix pattern. Grounded in merged <a href="https://github.com/greenbone/autohooks/pull/817">autohooks #817</a>.</li>
     <li><strong><a href="notes.html#py314-editable">Editable installs on Python 3.14 → phantom pytest failures</a></strong> — ~78 failures that vanish with a non-editable install.</li>
     <li><strong><a href="notes.html#unifi-v1-500">UniFi <code>GET /v1/devices</code> HTTP 500 on newer switch families</a></strong> — why device data vanishes completely, and the legacy <code>/stat/device</code> fallback pattern (with the field-mapping gotchas). Grounded in <a href="https://github.com/ruaan-deysel/ha-unifi-insights/pull/130">ha-unifi-insights #130</a>.</li>
+    <li><strong><a href="notes.html#polars-nan-derived">polars <code>fillna</code>/<code>notna</code> silently skip their NaN half on derived operands</a></strong> — the pandas-NaN vs polars-null trap, why a static dtype guess fails for <code>(a/b).fillna(0)</code>, and the schema-only probe that fixes it. Grounded in <a href="https://github.com/deem-data/stratum/pull/221">stratum #221</a>.</li>
   </ul>
 
   <h2>How I work</h2>
